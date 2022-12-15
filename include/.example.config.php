@@ -5,6 +5,10 @@ define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'gravekeeper');
 
+// NOTE: HEADS UP - do not commit to repo!
+define('HOST_EMAIL', /* Insert Service Email Address here */);
+define('HOST_APP_PW', /* Insert App Password here */);
+
 $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 if($mysqli == false) {
