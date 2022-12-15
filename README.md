@@ -3,23 +3,25 @@ This system is a project that I developed during my 3rd year in College using Qu
 
 ## Technology
 1. QGIS
-2. Javascript
-3. PHP
-4. HTML
-5. CSS
-6. Bootstrap
-7. Leaflet
+1. Javascript
+1. PHP
+1. HTML
+1. CSS
+1. Bootstrap
+1. Leaflet
 
 ## Setup
 1. Install xampp. 
-2. Download and copy the project into the htdoc folder located in the xampp folder.
-3. Run xampp, and click the or run apache and MySQL.
-4. Open any web-browser and run the project index file.
+1. Download and copy the project into the htdoc folder located in the xampp folder.
+1. Run xampp, and enable the Apache module as well as the MySQL module.
+1. Create the `gravekeeper` database on MySQL, and import the `gravekeeper.sql` file to set the tables up.
+1. Copy the contents of `.example.config.php` file to a new file named `config.php` and add your Service Email credentials. 
+1. Open any web-browser and go to `http://localhost`.
 
 ## Features
 1. Search and locate specific grave.
-2. Accomodate cemetery related services.
-3. Identify graves by the number of deceased buried in a single grave (It's common in Muslim to share a single grave with relatives).
+1. Accomodate cemetery related services.
+1. Identify graves by the number of deceased buried in a single grave (It's common in Muslim to share a single grave with relatives).
 
 <div align="center">
   <img src="https://github.com/AdzKalnain/Geo-Mapping-System-using-QGIS/blob/main/assets/img/mapping.jpg" width="100%"/>
