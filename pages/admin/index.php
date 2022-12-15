@@ -1,7 +1,6 @@
 <?php 
 require_once("../../include/initialize.php");
 require_once("../../include/config.php");
-
 	// if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
     //     header("location: ../../login.php");
     //     exit;

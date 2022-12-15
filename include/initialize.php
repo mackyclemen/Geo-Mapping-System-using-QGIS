@@ -5,7 +5,7 @@
 //DIRECTORY_SEPARATOR is a PHP Pre-defined constants:
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
-defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'].DS.'webmap');
+defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 defined('LIB_PATH') ? null : define ('LIB_PATH',SITE_ROOT.DS.'include');
 

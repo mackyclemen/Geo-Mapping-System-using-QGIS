@@ -8,25 +8,25 @@
     <title><?php echo $title;?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="<?php echo web_root; ?>pages/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/pages/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="<?php echo web_root; ?>pages/assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>pages/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>pages/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="/pages/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/pages/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/pages/assets/fonts/fontawesome5-overrides.min.css">
     
     <!-- WEB QGIS CSS Components -->
-    <link rel="stylesheet" href="<?php echo web_root; ?>webmap/css/leaflet.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>webmap/css/L.Control.Locate.min.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>webmap/css/qgis2web.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>webmap/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>webmap/css/leaflet-search.css">
+    <link rel="stylesheet" href="/webmap/css/leaflet.css">
+    <link rel="stylesheet" href="/webmap/css/L.Control.Locate.min.css">
+    <link rel="stylesheet" href="/webmap/css/qgis2web.css">
+    <link rel="stylesheet" href="/webmap/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/webmap/css/leaflet-search.css">
 
     <!-- DataTable -->
-    <link rel="stylesheet" href="<?php echo web_root; ?>pages/assets/DataTables/datatables.css">
+    <link rel="stylesheet" href="/pages/assets/DataTables/datatables.css">
 
     <!-- Custom Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
-    <link rel="stylesheet" href="<?php echo web_root; ?>pages/assets/css/admin.css">
+    <link rel="stylesheet" href="/pages/assets/css/admin.css">
 
 </head>
       
@@ -35,7 +35,7 @@
         <!-- style="background-color: #008E76;" -->
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-secondary p-0">
             <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="<?php echo web_root; ?>pages/admin/index.php?page=dashboard">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/pages/admin/index.php?page=dashboard">
                     <div class="sidebar-brand-icon"><i class="fas fa-mosque"></i></div>
                     <div class="sidebar-brand-text mx-3"><span>Gravekeeper</span></div>
                 </a>
@@ -43,27 +43,27 @@
                 <ul class="navbar-nav text-light" id="accordionSidebar">
                     <?php if (isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "admin") { ?>
                     
-                    <li class="nav-item"><a class="nav-link <?php echo $dashboard; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $record; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=record"><i class="fas fa-table"></i><span>Record</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $shop; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=shop"><i class="fas fa-cash-register"></i><span>Shop</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $order; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=order"><i class="fas fa-dolly"></i><span>Order</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $activity; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=activity"><i class="fas fa-book"></i><span>Activity</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $account; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=account"><i class="fas fa-users"></i><span>Account</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $dashboard; ?>" href="/pages/admin/index.php?page=dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $record; ?>" href="/pages/admin/index.php?page=record"><i class="fas fa-table"></i><span>Record</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $shop; ?>" href="/pages/admin/index.php?page=shop"><i class="fas fa-cash-register"></i><span>Shop</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $order; ?>" href="/pages/admin/index.php?page=order"><i class="fas fa-dolly"></i><span>Order</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="/pages/admin/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $activity; ?>" href="/pages/admin/index.php?page=activity"><i class="fas fa-book"></i><span>Activity</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $account; ?>" href="/pages/admin/index.php?page=account"><i class="fas fa-users"></i><span>Account</span></a></li>
                     
                     <?php } elseif (isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "clerk") { ?>
                     
-                    <li class="nav-item"><a class="nav-link <?php echo $dashboard; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $record; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=record"><i class="fas fa-table"></i><span>Record</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $order; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=order"><i class="fas fa-dolly"></i><span>Order</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $dashboard; ?>" href="/pages/admin/index.php?page=dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $record; ?>" href="/pages/admin/index.php?page=record"><i class="fas fa-table"></i><span>Record</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $order; ?>" href="/pages/admin/index.php?page=order"><i class="fas fa-dolly"></i><span>Order</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="/pages/admin/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
                     
                     <?php } ?>
 
 
-                    <!-- <li class="nav-item"><a class="nav-link <?php echo $employee; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=employee"><i class="fas fa-users"></i><span>Employee</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $feedback; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=feedback"><i class="fas fa-envelope-open-text"></i><span>Feedback</span></a></li> -->
-                    <!-- <li class="nav-item"><a class="nav-link <?php echo $profile; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=profile"><i class="fas fa-user"></i><span>Profile</span></a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link <?php echo $employee; ?>" href="/pages/admin/index.php?page=employee"><i class="fas fa-users"></i><span>Employee</span></a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo $feedback; ?>" href="/pages/admin/index.php?page=feedback"><i class="fas fa-envelope-open-text"></i><span>Feedback</span></a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link <?php echo $profile; ?>" href="/pages/admin/index.php?page=profile"><i class="fas fa-user"></i><span>Profile</span></a></li> -->
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -78,12 +78,12 @@
                                 <div class="nav-item dropdown no-arrow">
                                     <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">
                                         <span class="d-none d-lg-inline mr-2 text-gray-600 small"><?php echo $_SESSION['name']; ?></span>
-                                        <img class="border rounded-circle img-profile" src="<?php echo web_root; ?>pages/assets/img/profile/profile.jpg">
+                                        <img class="border rounded-circle img-profile" src="/pages/assets/img/profile/profile.jpg">
                                     </a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
                                         <!-- <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a> -->
                                         <!-- <div class="dropdown-divider"></div> -->
-                                        <a class="dropdown-item" href="<?php echo web_root; ?>include/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                        <a class="dropdown-item" href="/include/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
                             </li>
@@ -107,41 +107,41 @@
     </div>
     
     <script src="ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/jquery.min.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/chart.min.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/bs-init.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/theme.js"></script>
+    <script src="/pages/assets/js/jquery.min.js"></script>
+    <script src="/pages/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/pages/assets/js/chart.min.js"></script>
+    <script src="/pages/assets/js/bs-init.js"></script>
+    <script src="/pages/assets/js/theme.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <!-- <script src="ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
-    <script src="<?php echo web_root; ?>pages/assets/js/tables.js"></script>
+    <script src="/pages/assets/js/tables.js"></script>
 
     <!-- Optional -->
-    <script src="<?php echo web_root; ?>pages/assets/js/popper.js"></script>
+    <script src="/pages/assets/js/popper.js"></script>
     
     <!-- Web QGIS Components -->
-    <script src="<?php echo web_root; ?>webmap/js/qgis2web_expressions.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/leaflet.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/L.Control.Locate.min.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/leaflet.rotatedMarker.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/leaflet.pattern.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/leaflet-hash.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/Autolinker.min.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/rbush.min.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/labelgun.min.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/labels.js"></script>
-    <script src="<?php echo web_root; ?>webmap/js/leaflet-search.js"></script>
-    <script src="<?php echo web_root; ?>webmap/data/CemeteryCircumference_1.js"></script>
-    <script src="<?php echo web_root; ?>webmap/data/road_2.js"></script>
+    <script src="/webmap/js/qgis2web_expressions.js"></script>
+    <script src="/webmap/js/leaflet.js"></script>
+    <script src="/webmap/js/L.Control.Locate.min.js"></script>
+    <script src="/webmap/js/leaflet.rotatedMarker.js"></script>
+    <script src="/webmap/js/leaflet.pattern.js"></script>
+    <script src="/webmap/js/leaflet-hash.js"></script>
+    <script src="/webmap/js/Autolinker.min.js"></script>
+    <script src="/webmap/js/rbush.min.js"></script>
+    <script src="/webmap/js/labelgun.min.js"></script>
+    <script src="/webmap/js/labels.js"></script>
+    <script src="/webmap/js/leaflet-search.js"></script>
+    <script src="/webmap/data/CemeteryCircumference_1.js"></script>
+    <script src="/webmap/data/road_2.js"></script>
 
     <!-- Extra Functions -->
-    <script src="<?php echo web_root; ?>pages/assets/js/receipt.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/preloader.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/refresh.js"></script>
-    <script src="<?php echo web_root; ?>pages/assets/js/fixedtab.js"></script>
+    <script src="/pages/assets/js/receipt.js"></script>
+    <script src="/pages/assets/js/preloader.js"></script>
+    <script src="/pages/assets/js/refresh.js"></script>
+    <script src="/pages/assets/js/fixedtab.js"></script>
 
     <!-- DataTables -->
-    <script src="<?php echo web_root; ?>pages/assets/DataTables/datatables.js"></script>
+    <script src="/pages/assets/DataTables/datatables.js"></script>
 
         <?php
             $result = mysqli_query($mysqli, "SELECT * FROM grave_record
