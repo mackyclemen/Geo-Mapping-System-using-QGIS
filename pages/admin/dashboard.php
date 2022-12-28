@@ -1,6 +1,6 @@
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Dashboard</h3>
+                        <h3 class="text-dark mb-0">Home</h3>
                     </div>
                     
                     <div class="row">
@@ -12,11 +12,11 @@
                                 </div>
                                 <div class="card-body">
                                     <div>
-                                        <div id="map" style="border: 1px solid black; width: 99%; height: 400px;">
+                                        <!-- <div id="map" style="border: 1px solid black; width: 99%; height: 400px;">
                                         <div id="loading">
                                             <img id="loading-image" class="mx-auto" src="<?php echo web_root; ?>assets/img/Preloader_3.gif" alt="Loading..." />
                                         </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                                             //     $vacant_count = $vacant_count + 1;
                                                             // }
                                                         ?>
-                                                    <p class="m-0"><?php echo $vacant_count; ?></p>
+                                                    <!-- <p class="m-0"><?php echo $vacant_count; ?></p> -->
                                                     <p class="text-white-50 small m-0">Vacant Plot</p>
                                                 </div>
                                             </div>
@@ -73,49 +73,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-12 mb-4">
-                                    <!-- style="background-color: #53CC9D;" -->
-                                    <div class="card text-white bg-secondary shadow">
-                                        <div class="card-body">
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col">
-                                                    <?php
-                                                        $order_sql = mysqli_query($mysqli, "SELECT * FROM grave_orders WHERE order_status = 'Completed'");
-                                                        $order = mysqli_num_rows($order_sql);
-                                                        $order_count = 0;
-                                                        for ($order_result = 0; $order > $order_result; $order_result++) {
-                                                            $order_count = $order_count + 1;
-                                                        }
-                                                    ?>
-                                                    <p class="m-0"><?php echo $order_count; ?></p>
-                                                    <p class="text-white-50 small m-0">Order completed</p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-dolly-flatbed fa-2x mr-1"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-12 mb-4">
-                                    <!-- style="background-color: #3695E7;" -->
-                                    <div class="card text-white bg-secondary shadow">
-                                        <div class="card-body">
-                                            <div class="row align-items-center no-gutters">
-                                                <div class="col">
-                                                    <?php
-                                                        $order_pending_sql = mysqli_query($mysqli, "SELECT * FROM grave_orders WHERE order_status = 'Pending'");
-                                                        $order_pending = mysqli_num_rows($order_pending_sql);
-                                                        $order_pending_count = 0;
-                                                        for ($order_pending_result = 0; $order_pending > $order_pending_result; $order_pending_result++) {
-                                                            $order_pending_count = $order_pending_count + 1;
-                                                        }
-                                                    ?>
-                                                    <p class="m-0"><?php echo $order_pending_count; ?></p>
-                                                    <p class="text-white-50 small m-0">Pending order</p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-dolly fa-2x mr-1"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

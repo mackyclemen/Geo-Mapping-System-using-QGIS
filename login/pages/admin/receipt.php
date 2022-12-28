@@ -8,8 +8,8 @@
                                 <div class="col-12">
                                     <div class="receipt" id="receipt-div">
                                         <p class="centered">RECEIPT
-                                        <br>Mampang Muslim Public Cemetery
-                                        <br>gravekeeper@gmail.com</p>
+                                        <br>Himlayang Pilipino Memorial Park
+                                        <br>himlayangpilipinomemorialpark@gmail.com</p>
                                         <table class="receipt-table mx-auto">
                                             <thead>
                                                 <tr>
@@ -41,7 +41,7 @@
                                             </tbody>
                                         </table>
                                         <p class="centered pb-4">Thanks for your purchase!
-                                            <br>www.gravekeeper.com
+                                            <br>http://localhost/index.php
                                         </p>
                                     </div>
                                 </div>

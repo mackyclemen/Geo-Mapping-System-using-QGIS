@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content=""><title>Gravekeeper | Sign up</title>
+    <meta name="author" content=""><title>Himlayang Pilipino Memorial Park | Sign up</title>
 
     <!-- CSS Declaration -->
     <link rel="stylesheet" href="../pages/assets/bootstrap/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 <body>
     <div class="row d-flex justify-content-center">    
         <div class="col-6 text-center mx-3 my-3">
-            <h2 class="text-secondary">Gravekeeper</h2>
+            <h2 class="text-secondary">Himlayang Pilipino Memorial Park</h2>
         </div>
         <div class="col-6 bg-secondary text-center mx-3 my-3">
             <p class="text-white py-4">Please check you email inbox and click the link to verify your registration</p>

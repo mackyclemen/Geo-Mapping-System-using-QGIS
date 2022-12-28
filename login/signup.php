@@ -52,10 +52,15 @@
         }
 
         //validate user password
+        $uppercase    = preg_match('@[A-Z]@', $user_password);
+        $lowercase    = preg_match('@[a-z]@', $user_password);
+        $number       = preg_match('@[0-9]@', $user_password);
+        $specialchars = preg_match('@[^\w]@', $user_password);
+
         if (empty(trim($_POST["inputPassword"]))) {
             $password_error = "Please enter a password";     
-        } elseif (strlen(trim($_POST["inputPassword"])) < 6) {
-            $password_error = "Password must have atleast 6 characters";
+        } elseif (!$uppercase && !$lowercase && !$number && !$specialchars && strlen(trim($_POST["inputPassword"])) < 6) {
+            $password_error = "Password must have atleast 8 characters w/ upper, lower, number and special characters";
         }else {
             $user_password = trim($_POST["inputPassword"]);
         }
@@ -142,7 +147,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content=""><title>Gravekeeper | Sign up</title>
+    <meta name="author" content=""><title>Himlayang Pilipino Memorial Park | Sign up</title>
 
     <!-- CSS Declaration -->
     <link rel="stylesheet" href="../pages/assets/bootstrap/css/bootstrap.min.css">
@@ -158,7 +163,7 @@
 
     <form class="form-signup" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <div class="text-center mb-4 form-title">
-            <h1 class="h3 mb-5 font-weight-normal">Gravekeeper</h1>
+            <h1 class="h3 mb-5 font-weight-normal">Himlayang Pilipino Memorial Park</h1>
         </div>
 
         <div class="row">
@@ -209,7 +214,7 @@
             <p class="mt-2">Already have an account? <a href="index.php">Sign in now</a></p>
         </div>
         
-        <p class="mt-5 mb-3 text-muted text-center form-footer">&copy; Gravekeeper 2021</p>
+        <p class="mt-5 mb-3 text-muted text-center form-footer">&copy; Himlayang Pilipino Memorial Park 2022</p>
 
     </form>
 

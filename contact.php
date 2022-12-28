@@ -19,11 +19,11 @@ if(!empty($_POST["send"])) {
 	$mail->Host = 'smtp.hostinger.com';
 	$mail->Port = 587;
 	$mail->SMTPAuth = true;
-	$mail->Username = 'management@gravekeeper.website';
+	$mail->Username = 'himlayangpilipinomemorialpark@gmail.com';
 	$mail->Password = 'Gravekeeper12161998';
-	$mail->setFrom('management@gravekeeper.website', 'Gravekeeper');
-	$mail->addReplyTo('management@gravekeeper.website', 'Gravekeeper');
-	$mail->addAddress('management@gravekeeper.website','Gravekeeper');
+	$mail->setFrom('himlayangpilipinomemorialpark@gmail.com', 'Gravekeeper');
+	$mail->addReplyTo('himlayangpilipinomemorialpark@gmail.com', 'Gravekeeper');
+	$mail->addAddress('himlayangpilipinomemorialpark@gmail.com','Gravekeeper');
 	$mail->Subject = $emailsubject;
 	$mail->IsHTML(true);
 	$content = '

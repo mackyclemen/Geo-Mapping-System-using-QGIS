@@ -6,9 +6,8 @@
             <h6>Legend:</h6>
             <div class="col-sm-12 d-flex flex-column">
                 <span><i class="fa fa-square text-vacant"></i> Vacant</span>
-                <span><i class="fa fa-square text-occupied1"></i> Occupied by 1 person</span>
+                <span><i class="fa fa-square text-occupied1"></i> Unavailable</span>
                 <span><i class="fa fa-square text-occupied2"></i> Occupied by 2 person</span>
-                <span><i class="fa fa-square text-occupied3"></i> Occupied by 3 person</span>
             </div>
         </div>
     </div>

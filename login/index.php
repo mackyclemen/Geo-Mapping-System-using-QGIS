@@ -103,6 +103,7 @@
             }
 
         }
+        
 
         $mysqli->close();
     }
@@ -114,7 +115,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Gravekeeper</title>
+    <title>Login - Himlayang Pilipino Memorial Park</title>
     
     <!-- Bootstrap and other cdn declaration -->
     <link rel="stylesheet" href="../pages/assets/bootstrap/css/bootstrap.min.css">
@@ -131,7 +132,7 @@
 
     <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <div class="text-center mb-4">
-            <h3 class="mb-5">Gravekeeper</h3>
+            <h3 class="mb-5">Himlayang Pilipino Memorial Park</h3>
             <?php 
                 if(!empty($login_error)){
                     echo '<div class="alert alert-danger">' . $login_error . '</div>';
@@ -164,7 +165,7 @@
         
         <footer class="sticky-footer">
             <div class="container my-auto">
-                <div class="text-center my-auto copyright"><span>Copyright © Gravekeeper 2021</span></div>
+                <div class="text-center my-auto copyright"><span>Copyright © Himlayang Pilipino Memorial Park 2022</span></div>
             </div>
         </footer>
         <!-- <p class="mt-5 mb-3 text-muted text-center">&copy; Gravekeeper 2021</p> -->

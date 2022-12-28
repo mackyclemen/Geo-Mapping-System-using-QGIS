@@ -34,14 +34,12 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-secondary p-0">
             <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="/pages/admin/index.php?page=dashboard">
-                    <div class="sidebar-brand-icon"><i class="fas fa-mosque"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>Gravekeeper</span></div>
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="">
+                    <div class="sidebar-brand-icon"><i></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>Himlayang Pilipino</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link <?php echo $home; ?>" href="/pages/user/index.php?page=home"><i class="fas fa-tachometer-alt"></i><span>Home</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $service; ?>" href="/pages/user/index.php?page=service"><i class="fas fa-dolly"></i><span>Service</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="/pages/user/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
@@ -77,7 +75,7 @@
 
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Gravekeeper 2021</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © Himlayang Pilipino Memorial Park 2022</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
@@ -214,7 +212,7 @@
         }
     </script>
 
-    <script>
+    <!-- <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:21, minZoom:20
         }).fitBounds([[6.913597497117801,122.13930750978687],[6.914359146460475,122.14088332323063]]);
@@ -469,7 +467,7 @@
         map.on("layerremove", function(){
             resetLabels([layer_Marker_3]);
         });
-    </script>
+    </script> -->
 
 </body>
 </html>

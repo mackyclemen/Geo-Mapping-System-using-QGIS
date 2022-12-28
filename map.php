@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Map - Gravekeeper</title>
+    <title>Map - Himlayang Pilipino Memorial Park</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -41,7 +41,7 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="#">Gravekeeper</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand logo" href="#">Himlayang Pilipino Memorial Park</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
@@ -61,7 +61,6 @@
                         <span><i class="fa fa-square text-vacant"></i> Vacant</span>
                         <span><i class="fa fa-square text-occupied1"></i> Occupied by 1 person</span>
                         <span><i class="fa fa-square text-occupied2"></i> Occupied by 2 person</span>
-                        <span><i class="fa fa-square text-occupied3"></i> Occupied by 3 person</span>
                     </div>
                 </div>
                 <div class="row">
@@ -79,7 +78,7 @@
         </section>
     </main>
     <footer class="page-footer">
-            <p class="text-muted d-flex justify-content-center"><small>© 2021 Gravekeeper</small></p>
+            <p class="text-muted d-flex justify-content-center"><small>© 2022 Himlayang Pilipino Memorial Park</small></p>
         </div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
@@ -202,7 +201,7 @@
             }
         </script>
 
-        <script>
+        <!-- <script>
             var map = L.map('map', {
                 zoomControl:true, maxZoom:21, minZoom:20
             }).fitBounds([[6.913597497117801,122.13930750978687],[6.914359146460475,122.14088332323063]]);
@@ -456,7 +455,7 @@
             map.on("layerremove", function(){
                 resetLabels([layer_Marker_3]);
             });
-        </script>
+        </script> -->
 </body>
 
 </html>

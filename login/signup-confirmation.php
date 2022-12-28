@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content=""><title>Gravekeeper | Sign up</title>
+    <meta name="author" content=""><title>Himlayang Pilipino Memorial Park | Sign up</title>
 
     <!-- CSS Declaration -->
     <link rel="stylesheet" href="../pages/assets/bootstrap/css/bootstrap.min.css">
@@ -45,7 +45,7 @@
 
     <form class="form-signup" action="" method="POST">
         <div class="text-center mb-4 form-title">
-            <h1 class="h3 mb-5 font-weight-normal">Gravekeeper</h1>
+            <h1 class="h3 mb-5 font-weight-normal">Himlayang Pilipino Memorial Park</h1>
         </div>
         <div class="text-center">
             <p><?php echo $msg; ?></p>
