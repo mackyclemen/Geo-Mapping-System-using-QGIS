@@ -14,11 +14,11 @@
                 <div class="card mb-4">
                     <div class="card-body">
                         <div>
-                            <!-- <div id="map" style="border: 1px solid black; width: 99%; height: 420px;">
+                            <div id="map" style="border: 1px solid black; width: 99%; height: 420px;">
                             <div id="loading">
                                 <img id="loading-image" class="mx-auto" src="<?php echo web_root; ?>assets/img/Preloader_3.gif" alt="Loading..." />
                             </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

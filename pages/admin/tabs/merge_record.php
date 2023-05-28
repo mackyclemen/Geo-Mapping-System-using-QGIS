@@ -64,7 +64,7 @@
                                         <select name="grave-no" id="graveno" class="form-control" required>
                                             <option value="none">Select a grave no</option>
                                             <?php
-                                                $result = mysqli_query($mysqli, "SELECT MAX(record_death) as max FROM grave_record");
+                                                $result = mysqli_query($mysql, "SELECT MAX(record_death) as max FROM grave_record");
                                                 while ($row = mysqli_fetch_array($result)) {
                                                     $death_date = date_create($row['max']);
                                                     $current_date = date_create(@date('Y-m-d H:i:s'));

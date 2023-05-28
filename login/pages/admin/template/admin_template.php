@@ -37,7 +37,7 @@
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="<?php echo web_root; ?>pages/admin/index.php?page=dashboard">
                     <div class="sidebar-brand-icon"><i class="fas fa-mosque"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>Gravekeeper</span></div>
+                    <div class="sidebar-brand-text mx-3"><span>Himlayang Pilipino Memorial Park</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
@@ -45,8 +45,6 @@
                     
                     <li class="nav-item"><a class="nav-link <?php echo $dashboard; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $record; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=record"><i class="fas fa-table"></i><span>Record</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $shop; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=shop"><i class="fas fa-cash-register"></i><span>Shop</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $order; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=order"><i class="fas fa-dolly"></i><span>Order</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $activity; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=activity"><i class="fas fa-book"></i><span>Activity</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $account; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=account"><i class="fas fa-users"></i><span>Account</span></a></li>
@@ -55,14 +53,12 @@
                     
                     <li class="nav-item"><a class="nav-link <?php echo $dashboard; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $record; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=record"><i class="fas fa-table"></i><span>Record</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $order; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=order"><i class="fas fa-dolly"></i><span>Order</span></a></li>
                     <li class="nav-item"><a class="nav-link <?php echo $map; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=map"><i class="fas fa-map"></i><span>Map</span></a></li>
                     
                     <?php } ?>
 
 
                     <!-- <li class="nav-item"><a class="nav-link <?php echo $employee; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=employee"><i class="fas fa-users"></i><span>Employee</span></a></li>
-                    <li class="nav-item"><a class="nav-link <?php echo $feedback; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=feedback"><i class="fas fa-envelope-open-text"></i><span>Feedback</span></a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link <?php echo $profile; ?>" href="<?php echo web_root; ?>pages/admin/index.php?page=profile"><i class="fas fa-user"></i><span>Profile</span></a></li> -->
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
@@ -100,7 +96,7 @@
 
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Gravekeeper 2021</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © Himlayang Pilipino Memorial Park 2022</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

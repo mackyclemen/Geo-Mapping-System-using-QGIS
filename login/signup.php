@@ -103,7 +103,7 @@
                         $mail->Host = "smtp.gmail.com";
                         $mail->Port = "465";
                         $mail->From= constant("HOST_EMAIL");
-                        $mail->FromName='Graveyarder';
+                        $mail->FromName='Himlayang Pilipino Memorial Park';
                         $mail->AddAddress($user_email, $user_firstname.''.$user_lastname);
                         $mail->Subject  =  'Verification';
                         $mail->IsHTML(true);
@@ -112,7 +112,6 @@
                         $html = file_get_contents('message.html');
                         $html = str_replace("[receiver name]",$user_firstname.''.$user_lastname,$html);
                         $html = str_replace("[date today]",$date,$html);
-                        // gravekeeper.website/login/signup-confirmation.php?key={{key}}&token={{token}}
                         $html = str_replace("{{registration_link}}","http://localhost/login/signup-confirmation.php?key=".$user_email."&token=".$user_email_link."",$html);
                         // $html = str_replace("[[key]]]",$user_email,$html);
                         // $html = str_replace("[[token]]]",$user_email_link,$html);

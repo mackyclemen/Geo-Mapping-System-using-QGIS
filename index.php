@@ -29,10 +29,10 @@
     </nav>
     <main class="page landing-page">
     <!-- style="background-image:url(&quot;assets/img/satelitemap.jpg&quot;); -->
-        <section class="clean-block clean-hero" color:rgba(9, 162, 255, 0);> 
+    <section class="clean-block clean-hero" style="background-image:url(&quot;upload/map.jpg&quot;);color:rgba(9, 162, 255, 0);">
             <div class="text">
-                <h2>Himlayang Pilipino Memorial Park</h2>
-                <p>Alay sa diwang Pilipino</p>
+                <h2>Himlayang Pilipino</h2>
+                <p>Alay sa Diwang Pilipino</p>
             </div>
         </section>
         <section class="clean-block features">

@@ -27,13 +27,13 @@ if(isset($_POST['password-reset-token']) && $_POST['email'])
         $mail->CharSet =  "utf-8";
         $mail->IsSMTP();
         $mail->SMTPAuth = true;                  
-        $mail->Username = "gravekeeper.inc@gmail.com";
-        $mail->Password = "Gravekeeper12161998";
+        $mail->Username = "himlayangpilipinomemorialpark@gmail.com";
+        $mail->Password = "rjmhsdtwtnyigaoo";
         $mail->SMTPSecure = "ssl";  
         $mail->Host = "smtp.gmail.com";
         $mail->Port = "465";
-        $mail->From='gravekeeper.inc@gmail.com';
-        $mail->FromName='Gravekeeper';
+        $mail->From='himlayangpilipinomemorialpark@gmail.com';
+        $mail->FromName='Himlayang Pilipino Memorial Park';
         $mail->AddAddress($_POST['email'], $_POST['name']);
         $mail->Subject  =  'Verification';
         $mail->IsHTML(true);

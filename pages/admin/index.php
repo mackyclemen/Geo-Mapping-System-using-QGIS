@@ -1,14 +1,14 @@
 <?php 
-require_once("../../include/initialize.php");
-require_once("../../include/config.php");
-	// if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
-    //     header("location: ../../login.php");
-    //     exit;
-    // }
-	// if ($_SESSION["user_type"] == "user") {
-	// 	header("location: ../../login.php");
-    //     exit;
-	// }
+include("../../include/initialize.php");
+// include("../../include/config.php");
+	if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
+        header("location: ../../login.php");
+        exit;
+    }
+	if ($_SESSION["user_type"] == "user") {
+		header("location: ../../login.php");
+        exit;
+	}
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
         header("location: ../../login/index.php");
         exit;
@@ -22,98 +22,52 @@ if (isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "admin") {
     $content='record.php';
     $view = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
     switch ($view) {
-        case 'dashboard' :
-            $title="Dashboard - Gravekeeper";	
-            $content='dashboard.php';	
-            $dashboard='active';	
+        case 'home' :
+            $title="Home - Himlayang Pilipino";	
+            $content='home.php';	
+            $home='active';	
             break;
         case 'profile' :
-            $title="Profile - Gravekeeper";	
+            $title="Profile - Himlayang Pilipino";	
             $content='profile.php';
             $profile='active';		
             break;
         case 'record' :
-            $title="Record - Gravekeeper";	
+            $title="Record - Himlayang Pilipino";	
             $content='record.php';
             $record='active';		
             break;
         case 'employee' :
-            $title="Employee - Gravekeeper";	
+            $title="Employee - Himlayang Pilipino";	
             $content='employee.php';
             $employee='active';		
             break;
-        case 'shop' :
-            $title="Shop - Gravekeeper";	
-            $content='shop.php';
-            $shop='active';		
-            break;	
-        case 'order' :
-            $title="Order - Gravekeeper";	
-            $content='order.php';		
-            $order='active';
-            break;
         case 'map' :
-            $title="Map - Gravekeeper";	
+            $title="Map - Himlayang Pilipino";	
             $content='map.php';		
             $map='active';
             break;
-        case 'receipt' :
-            $title="Receipt - Gravekeeper";	
-            $content='receipt.php';
-            $order='active';
-            break;
         case 'activity' :
-            $title="Activity - Gravekeeper";	
+            $title="Activity - Himlayang Pilipino";	
             $content='activity.php';
             $activity='active';
             break;
 
-        // FEEDBACK
-        case 'feedback' :
-            $title="Feedback - Gravekeeper";	
-            $content='feedback/feedback.php';		
-            $feedback='active';
-            break;
-        case 'feedback_favorite' :
-            $title="Feedback - Gravekeeper";	
-            $content='feedback/feedback_favorite.php';		
-            $feedback='active';
-            break;
-        case 'feedback_archive' :
-            $title="Feedback - Gravekeeper";	
-            $content='feedback/feedback_archive.php';		
-            $feedback='active';
-            break;
-        // FEEDBACK END
 
         // FUNCTION CONNECTOR
         case 'add' :
-            $title="New Record - Gravekeeper";	
+            $title="New Record - Himlayang Pilipino";	
             $content='function/add.php';		
             break;
         case 'merge' :
-            $title="Merge Record - Gravekeeper";	
+            $title="Merge Record - Himlayang Pilipino";	
             $content='function/merge.php';		
-            break;
-        case 'payment' :
-            $title="Check out - Gravekeeper";	
-            $content='payment.php';		
             break;
         // END CONNECTOR
 
         // TABS
-        case 'update_service' :
-            $title="Update Service - Gravekeeper";	
-            $content='tabs/update_service.php';	
-            $shop='active';	
-            break;
-        case 'add_service' :
-            $title="New Service - Gravekeeper";	
-            $content='tabs/add_service.php';
-            $shop='active';		
-            break;
         case 'add_employee' :
-            $title="New Employee - Gravekeeper";	
+            $title="New Employee - Himlayang Pilipino";	
             $content='tabs/add_employee.php';
             $employee='active';		
             break;
@@ -121,71 +75,46 @@ if (isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "admin") {
 
         // OTHER
         case 'insert' :
-            $title="New Record - Gravekeeper";	
+            $title="New Record - Himlayang Pilipino";	
             $content='tabs/insert_record.php';	
             $record='active';	
             break;
         case 'merge_record' :
-            $title="Merge Record - Gravekeeper";	
+            $title="Merge Record - Himlayang Pilipino";	
             $content='tabs/merge_record.php';	
             $record='active';
             break;
         case 'new_record' :
-            $title="New Record - Gravekeeper";	
+            $title="New Record - Himlayang Pilipino";	
             $content='tabs/new_record.php';	
             $record='active';	
             break;
-        case 'add_order' :
-            $title="New Order - Gravekeeper";	
-            $content='tabs/add_order.php';	
-            $order='active';
-            break;
-        case 'select_order' :
-            $title="Select Order - Gravekeeper";	
-            $content='tabs/select_order.php';	
-            $order='active';	
-        break;
-        case 'insert_plot' :
-            $title="New plot - Gravekeeper";	
-            $content='tabs/new_plot.php';	
-            $map='active';	
-        break;
         case 'add_img' :
-            $title="Insert img - Gravekeeper";	
+            $title="Insert img - Himlayang Pilipino";	
             $content='tabs/add_img.php';	
             $map='active';	
         break;
-        case 'service_history':
-            $title="Service History - Gravekeeper";
-            $content='tabs/service_history.php';
-            $record='active';
-        break;
         case 'contact_person':
-            $title="Contact Person - Gravekeeper";
+            $title="Contact Person - Himlayang Pilipino";
             $content='tabs/contact_person.php';
             $record='active';
         break;
-        case 'order_details':
-            $title="Order Details - Gravekeeper";
-            $content='tabs/order_details.php';
-            $order='active';
-        break;
         case 'edit_record':
-            $title="Update Record - Gravekeeper";
+            $title="Update Record - Himlayang Pilipino";
             $content='tabs/edit_record.php';
             $record='active';
         break;
         case 'account':
-            $title="Account - Gravekeeper";
+            $title="Account - Himlayang Pilipino";
             $content='tabs/account.php';
             $account='active';
         break;
         // 
 
         default :
-            $title="Dashboard - Gravekeeper";	
-            $content ='dashboard.php';	
-            $dashboard='active';	
+            $title="Home - Himlayang Pilipino";	
+            $content ='home.php';	
+            $home='active';	
     }
     require_once("template/admin_template.php");
 }
@@ -194,78 +123,62 @@ elseif (isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "clerk") {
     $content='record.php';
     $view = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
     switch ($view) {
-        case 'dashboard' :
-            $title="Dashboard - Gravekeeper";	
-            $content='dashboard.php';	
-            $dashboard='active';	
+        case 'home' :
+            $title="Home - Himlayang Pilipino";	
+            $content='home.php';	
+            $home='active';	
             break;
         case 'record' :
-            $title="Record - Gravekeeper";	
+            $title="Record - Himlayang Pilipino";	
             $content='record.php';
             $record='active';		
             break;
         case 'order' :
-            $title="Order - Gravekeeper";	
+            $title="Order - Himlayang Pilipino";	
             $content='order.php';		
             $order='active';
             break;
         case 'map' :
-            $title="Map - Gravekeeper";	
+            $title="Map - Himlayang Pilipino";	
             $content='map.php';		
             $map='active';
             break;
         case 'receipt' :
-            $title="Receipt - Gravekeeper";	
+            $title="Receipt - Himlayang Pilipino";	
             $content='receipt.php';
             $order='active';
             break;
 
-        // FEEDBACK
-        case 'feedback' :
-            $title="Feedback - Gravekeeper";	
-            $content='feedback/feedback.php';		
-            $feedback='active';
-            break;
-        case 'feedback_favorite' :
-            $title="Feedback - Gravekeeper";	
-            $content='feedback/feedback_favorite.php';		
-            $feedback='active';
-            break;
-        case 'feedback_archive' :
-            $title="Feedback - Gravekeeper";	
-            $content='feedback/feedback_archive.php';		
-            $feedback='active';
-            break;
-        // FEEDBACK END
+
 
         // FUNCTION CONNECTOR
         case 'add' :
-            $title="New Record - Gravekeeper";	
+            $title="New Record - Himlayang Pilipino";	
             $content='function/add.php';		
             break;
         case 'merge' :
-            $title="Merge Record - Gravekeeper";	
+            $title="Merge Record - Himlayang Pilipino";	
             $content='function/merge.php';		
             break;
         case 'payment' :
-            $title="Check out - Gravekeeper";	
+            $title="Check out - Himlayang Pilipino";	
             $content='payment.php';		
             break;
         // END CONNECTOR
 
         // TABS
         case 'update_service' :
-            $title="Update Service - Gravekeeper";	
+            $title="Update Service - Himlayang Pilipino";	
             $content='tabs/update_service.php';	
             $shop='active';	
             break;
         case 'add_service' :
-            $title="New Service - Gravekeeper";	
+            $title="New Service - Himlayang Pilipino";	
             $content='tabs/add_service.php';
             $shop='active';		
             break;
         case 'add_employee' :
-            $title="New Employee - Gravekeeper";	
+            $title="New Employee - Himlayang Pilipino";	
             $content='tabs/add_employee.php';
             $employee='active';		
             break;
@@ -273,66 +186,66 @@ elseif (isset($_SESSION["user_type"]) && $_SESSION["user_type"] == "clerk") {
 
         // OTHER
         case 'insert' :
-            $title="New Record - Gravekeeper";	
+            $title="New Record - Himlayang Pilipino";	
             $content='tabs/insert_record.php';	
             $record='active';	
             break;
         case 'merge_record' :
-            $title="Merge Record - Gravekeeper";	
+            $title="Merge Record - Himlayang Pilipino";	
             $content='tabs/merge_record.php';	
             $record='active';
             break;
         case 'new_record' :
-            $title="New Record - Gravekeeper";	
+            $title="New Record - Himlayang Pilipino";	
             $content='tabs/new_record.php';	
             $record='active';	
             break;
         case 'add_order' :
-            $title="New Order - Gravekeeper";	
+            $title="New Order - Himlayang Pilipino";	
             $content='tabs/add_order.php';	
             $order='active';
             break;
         case 'select_order' :
-            $title="Select Order - Gravekeeper";	
+            $title="Select Order - Himlayang Pilipino";	
             $content='tabs/select_order.php';	
             $order='active';	
         break;
         case 'insert_plot' :
-            $title="New plot - Gravekeeper";	
+            $title="New plot - Himlayang Pilipino";	
             $content='tabs/new_plot.php';	
             $map='active';	
         break;
         case 'add_img' :
-            $title="Insert img - Gravekeeper";	
+            $title="Insert img - Himlayang Pilipino";	
             $content='tabs/add_img.php';	
             $map='active';	
         break;
         case 'service_history':
-            $title="Service History - Gravekeeper";
+            $title="Service History - Himlayang Pilipino";
             $content='tabs/service_history.php';
             $record='active';
         break;
         case 'contact_person':
-            $title="Contact Person - Gravekeeper";
+            $title="Contact Person - Himlayang Pilipino";
             $content='tabs/contact_person.php';
             $record='active';
         break;
         case 'order_details':
-            $title="Order Details - Gravekeeper";
+            $title="Order Details - Himlayang Pilipino";
             $content='tabs/order_details.php';
             $order='active';
         break;
         case 'edit_record':
-            $title="Update Record - Gravekeeper";
+            $title="Update Record - Himlayang Pilipino";
             $content='tabs/edit_record.php';
             $record='active';
         break;
         // 
 
         default :
-            $title="Dashboard - Gravekeeper";	
-            $content ='dashboard.php';	
-            $dashboard='active';	
+            $title="Home - Himlayang Pilipino";	
+            $content ='home.php';	
+            $home='active';	
     }
     require_once("template/admin_template.php");
 }

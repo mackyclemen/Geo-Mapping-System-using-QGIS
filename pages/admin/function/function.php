@@ -31,20 +31,20 @@ switch ($action) {
 }
    
 function accept(){
-    global $mysqli;
+    global $con;
     $grave_no = $_GET['graveid'];
         $sql = "UPDATE grave_data SET status = ? WHERE grave_no = ?";
-        if ($stmt = $mysqli->prepare($sql)) {
+        if ($stmt = $con->prepare($sql)) {
             $stmt->bind_param("ss", $param_status, $param_graveno);
             $param_status = 'occupied';
             $param_graveno = $grave_no;
             if ($stmt->execute()) {
                 $path = '../../../upload/';
-                $fetch = mysqli_query($mysqli, "SELECT * FROM grave_file WHERE data_id = $grave_no");
+                $fetch = mysqli_query($con, "SELECT * FROM grave_file WHERE data_id = $grave_no");
                 if ($row = mysqli_fetch_array($fetch)) {
                     if(unlink($path.$row['user_file']) && unlink($path.$row['deceased_file'])) {
                         $sqldelete = "DELETE FROM grave_file WHERE data_id = $grave_no";
-                        if (mysqli_query($mysqli, $sqldelete)) {
+                        if (mysqli_query($con, $sqldelete)) {
                             header("location: ../index.php?page=request");
                         } else {
                             message ("Something went wrong please try again later","error");
@@ -67,24 +67,24 @@ function accept(){
             header("location: ../index.php?page=request");
         }
         $stmt->close();
-    $mysqli->close();
+    $con->close();
 }
 
 function deny(){
-    global $mysqli;
+    global $con;
     $grave_no = $_GET['graveid'];
         $sql = "UPDATE grave_data SET status = ? WHERE grave_no = ?";
-        if ($stmt = $mysqli->prepare($sql)) {
+        if ($stmt = $con->prepare($sql)) {
             $stmt->bind_param("si", $param_status, $param_graveno);
             $param_status = 'vacant';
             $param_graveno = $grave_no;
             if ($stmt->execute()) {
                 $path = '../../../upload/';
-                $fetch = mysqli_query($mysqli, "SELECT * FROM grave_file WHERE data_id = $grave_no");
+                $fetch = mysqli_query($con, "SELECT * FROM grave_file WHERE data_id = $grave_no");
                 if ($row = mysqli_fetch_array($fetch)) {
                     if(unlink($path.$row['user_file']) && unlink($path.$row['deceased_file'])) {
                         $sqldelete = "DELETE FROM grave_file WHERE data_id = $grave_no";
-                        if (mysqli_query($mysqli, $sqldelete)) {
+                        if (mysqli_query($con, $sqldelete)) {
                             $del_record = "DELETE FROM grave_record WHERE grave_id = $grave_no";
                             if (mysqli_query($mysqli, $del_record)) {
                                 header("location: ../index.php?page=request");
@@ -373,7 +373,7 @@ function plot(){
 }
 
 function img(){
-    global $mysqli;
+    global $con;
     $img_ext = $img_file = "";
     $img_error = "";
     $grave_id = $_GET['graveid'];
@@ -394,14 +394,14 @@ function img(){
             } else {
                 $path = '../../../upload/';
                 
-                $maxid = mysqli_query($mysqli,"SELECT MAX(id) FROM grave_file");
+                $maxid = mysqli_query($con,"SELECT MAX(id) FROM grave_file");
                 $row = mysqli_fetch_array($maxid);
                 $img_file = ($row[0]+1) . '-' . $img_file;
                 $created = @date('Y-m-d H:i:s');
                 move_uploaded_file($_FILES['grave-img']['tmp_name'],($path . $img_file));
 
                 $upload = "INSERT INTO grave_file (grave_filename, record_id, date_uploaded) VALUES (?,?,?)";
-                if ($stmt = $mysqli->prepare($upload)) {
+                if ($stmt = $con->prepare($upload)) {
                     $stmt->bind_param("sis", $param_file, $param_id, $param_created);
                     $param_file = $img_file;
                     $param_id = $grave_id;
@@ -421,7 +421,7 @@ function img(){
             header("location: ../index.php?page=map");
         }
     }
-    $mysqli->close();
+    $con->close();
 }
 
 ?>

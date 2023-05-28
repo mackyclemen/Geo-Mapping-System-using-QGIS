@@ -54,13 +54,10 @@
                                 if(password_verify($login_password, $hashed_password)){
                                     if ($login_level == "admin") {
                                         session_start();
-                                        $_SESSION["loggedin"] = true;
-                                        $_SESSION["id"] = $login_id;
-                                        $_SESSION["user_type"] = $login_level;
+                                        $_SESSION["logid"] = $login_id;
                                         $_SESSION["email"] = $login_email;
-                                        $_SESSION["name"] = $login_username;
-                                        $_SESSION["joined"] = $joined;
-                                        header("location: ../pages/admin/index.php");
+                                        $_SESSION["num"] = random_int(100000, 999999);
+                                        include ("emailverifylogin.php");
                                     } 
                                     elseif ($login_level == "user") {
                                         session_start();
@@ -168,7 +165,7 @@
                 <div class="text-center my-auto copyright"><span>Copyright © Himlayang Pilipino Memorial Park 2022</span></div>
             </div>
         </footer>
-        <!-- <p class="mt-5 mb-3 text-muted text-center">&copy; Gravekeeper 2021</p> -->
+        
 
     </form>
 

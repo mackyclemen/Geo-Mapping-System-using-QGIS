@@ -12,7 +12,7 @@
                                 <table class="table my-0" id="deceased-table">
                                     <?php 
                                         $result = mysqli_query($mysqli, "SELECT * FROM grave_record 
-                                        LEFt JOIN grave_data ON grave_record.grave_id=grave_data.id WHERE status = 'occupied1' OR status = 'occupied2' OR status = 'occupied3'");
+                                        LEFT JOIN grave_data ON grave_record.grave_id=grave_data.id WHERE status = 'occupied1' OR status = 'occupied2' OR status = 'occupied3'");
                                     ?>
                                     <thead>
                                         <tr>
@@ -44,7 +44,6 @@
                                                             <span class="fas fa-ellipsis-h"></span>
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="moreMenu">
-                                                            <a class="dropdown-item" href="index.php?graveno='.$row['grave_no'].' & page=service_history">Service History</a>
                                                             <a class="dropdown-item" href="index.php?name='.$nametrim.' & page=contact_person">Contact Person</a>
                                                             <a class="dropdown-item" href="index.php?id='.$row['record_id'].' & page=edit_record">Edit</a>
                                                         </div>

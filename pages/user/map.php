@@ -7,7 +7,7 @@
             <div class="col-sm-12 d-flex flex-column">
                 <span><i class="fa fa-square text-vacant"></i> Vacant</span>
                 <span><i class="fa fa-square text-occupied1"></i> Unavailable</span>
-                <span><i class="fa fa-square text-occupied2"></i> Occupied by 2 person</span>
+                <!-- <span><i class="fa fa-square text-occupied2"></i> Occupied by 2 person</span> -->
             </div>
         </div>
     </div>

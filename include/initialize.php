@@ -10,11 +10,11 @@ defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT']);
 defined('LIB_PATH') ? null : define ('LIB_PATH',SITE_ROOT.DS.'include');
 
 //load the database configuration first.
-require_once(LIB_PATH.DS."database.php");
-require_once(LIB_PATH.DS."config.php");
-require_once(LIB_PATH.DS."PHPMailer-master/src/Exception.php");
-require_once(LIB_PATH.DS."PHPMailer-master/src/PHPMailer.php");
-require_once(LIB_PATH.DS."PHPMailer-master/src/SMTP.php");
-require_once(LIB_PATH.DS."auth_session.php");
-require_once(LIB_PATH.DS."configuration.php");
+include("database.php");
+include("config.php");
+include("PHPMailer-master/src/Exception.php");
+include("PHPMailer-master/src/PHPMailer.php");
+include("PHPMailer-master/src/SMTP.php");
+include("auth_session.php");
+include("configuration.php");
 ?>

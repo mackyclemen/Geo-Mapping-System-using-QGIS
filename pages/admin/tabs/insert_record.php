@@ -7,7 +7,7 @@
                     <div class="card">
                         <div class="card-body">
                             <?php $count = 0; ?>
-                            <form class="record-form" action="function/function.php?count=<?php echo $count;?>& action=add" method="POST">
+                            <form class="record-form" action="function/function.php?count=<?php echo $count;?>&action=add" method="POST">
                                 <div class="row">
                                     <div class="col-md-4 col-sm-12">
                                         <label for="deceased-firstname" class="form-label label mt-3">First Name <span class="text-danger">*</span></label>
@@ -67,7 +67,7 @@
                                             <?php
                                                 $result = mysqli_query($mysqli, "SELECT * FROM grave_data WHERE status = 'vacant'");
                                                 while ($row = mysqli_fetch_array($result)) {
-                                                    echo  '<option value='.$row['grave_no'].'>'.$row['grave_no'].'</option>';
+                                                    echo  '<option value='.$row['grave_no'].'>'.$row['grave_no'].' ('.$row['label'].') </option>';
                                                 }
                                             ?>
                                         </select>
